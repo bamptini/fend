@@ -3,10 +3,10 @@ function handleSubmit(event) {
 
     // check what text was put into the form field
     let formText = document.getElementById('inputURL').value
-    checkForName(formText)
+    Client.checkForName(formText)
 
     console.log("::: Form Submitted :::")
-    fetch('http://localhost:8080/test')
+    fetch('http://localhost:8081/nlpData')
     .then(res => res.json())
     .then(function(res) {
         document.getElementById('results').innerHTML = res.message

@@ -2,7 +2,8 @@
 
 const baseUrl = 'https://api.meaningcloud.com/sentiment-2.1?';
 const apiKey = 'key=630e7f329aa632f6fb3857e4c71f4be9&';
-const language = 'lang=en&'
+const language = '&lang=en&url='
+//const apiKey = process.env.API_KEY
 
 
 // variable to represent the URL to be processed
@@ -10,12 +11,12 @@ const language = 'lang=en&'
 //console.log('New URL is '+ newUrl)
 
 
-document.getElementById('submit').addEventListener('click', performAction);
+document.getElementById('generate').addEventListener('click', performAction);
 
 function performAction(e){
 console.log('1')
 
-const newUrl = document.getElementById('inputURL').value;
+const newUrl = document.getElementById('url').value;
 console.log('New URL is '+ newUrl)
   
     // Call API to evaluate entered URL for NLP - based on user input into element.
