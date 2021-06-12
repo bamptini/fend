@@ -1,16 +1,23 @@
-function handleSubmit(event) {
+
+const handleSubmit = async(event) => {
     event.preventDefault()
 
-    // check what text was put into the form field
-    let formText = document.getElementById('inputURL').value
-    Client.checkForName(formText)
+    // CHECK URL ASSIGN TO VARIABLE
+    const formURL = document.getElementById('inputURL').value
+    Client.checkForName(formURL)
+    console.log(formURL)
 
     console.log("::: Form Submitted :::")
-    fetch('http://localhost:8081/nlpData')
-    .then(res => res.json())
-    .then(function(res) {
-        document.getElementById('results').innerHTML = res.message
-    })
-}
+       
+   try{
 
+    let response = await Client.postData("/urlPost",{nplData:formURL})
+    console.log('object returned' + response)
+    
+    postUpdates(response)    
+}
+catch (error) {
+    console.group(error)
+}
+}
 export { handleSubmit }

@@ -24,21 +24,21 @@
         <main>
             <section>
                 <p>Process WEB Page using NPL</p>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="inputURL" type="text" name="input" value="" onblur="onBlur()" placeholder="Enter URL">
-                    <input id="submit" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="inputURL" type="text" name="input" value="" placeholder="Please enter a URL to process">
+                    <button id="submit" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">Submit</button>
                 </form>
                 <br><br>
 
-                <div class ="">
+                <!--div class ="">
                     <label for="url">Enter URL to process</label>
                     <textarea class= "myInput" id="url" placeholder="Enter your url here" rows="1" cols="50"></textarea>
                     <button id="generate" type = "submit"> Generate </button>
-                  </div>
+                  </div-->
             </section>
 
             <section>
-                <strong>Form Results:</strong>
+                <strong>Results for provided URL :</strong>
                 <div id="results"></div>
             </section>
         </main>
