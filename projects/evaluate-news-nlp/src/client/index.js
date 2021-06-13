@@ -1,5 +1,8 @@
-import { checkForName } from './js/nameChecker'
+import { checkURL } from './js/urlChecker'
 import { handleSubmit } from './js/formHandler'
+import { postData } from './js/postData'
+import { postUpdates } from './js/app'
+
 import './js/app.js'
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -9,13 +12,12 @@ import './styles/header.scss'
 import img from './images/infoview.png'
 
 export{
-    checkForName,
-    handleSubmit
+    checkURL,
+    handleSubmit,
+    postData,
+    postUpdates,
 }
 
 document.getElementById('logo').src = img
 
-console.log(checkForName);
-
-alert("Welcome here is my pop-up")
-console.log("CHANGE!!");
+console.log(checkURL);

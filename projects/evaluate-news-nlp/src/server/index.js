@@ -11,7 +11,7 @@ dotenv.config();
 const baseUrl = 'https://api.meaningcloud.com/sentiment-2.1?';
 const apiKey = process.env.API_KEY;
 const language = '&lang=en&url='
-const url = 'http://naturalpermanentmakeup.co.uk'
+//const url = 'http://naturalpermanentmakeup.co.uk'
 
 console.log(`Your API key is ${process.env.API_KEY}`);
 
@@ -27,7 +27,7 @@ app.use(express.json());
 
 // OTHER DEPENDENCIES
 const path = require('path')
-const mockAPIResponse = require('./mockAPI.js')
+//const mockAPIResponse = require('./mockAPI.js')
 const bodyParser = require('body-parser');
 
 // CORS FOR CROSS ORIGIN ALLOWANCE
@@ -66,8 +66,8 @@ app.post('/urlPost', async (request, response) => {
     try {
         const apiResult = await fetch(`${baseUrl}${apiKey}${language}${request.body.formURL}`);
         console.log(apiResult);
-
-        let newData = request.body;
+        res.send(nlpData);
+        //let newData = request.body;
     } catch(error) {
         console.log("Hit Error", error);
     }

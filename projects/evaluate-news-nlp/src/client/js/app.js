@@ -1,6 +1,6 @@
 /* Global Variables */
 
-//GET data from WEB API using ASYNC
+/*GET data from WEB API using ASYNC
     const newInput = async (baseURL, apiKey, language, newUrl)=>{
       console.log('2')  
       console.log('New Input ', {baseURL, apiKey, language, newUrl})
@@ -14,11 +14,11 @@
         console.log("error", error);
         // appropriately handle the error
       }
-    }
+    }*/
 
   //CODE TO UPDATE UI
   const postUpdates = async()=>{  
-            const entries = await fetch('/nlp');
+            const entries = await fetch('/urlPost');
             console.log(entries)
         console.log('8')
         try{

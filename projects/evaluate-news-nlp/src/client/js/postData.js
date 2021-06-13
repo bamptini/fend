@@ -1,6 +1,9 @@
 //POST DATA to route
 const postData = async ( baseUrl = '', data = {})=>{
+  console.log('postData.js ', baseUrl)
+  console.log('postData.js ',data)
   console.log('5')
+  console.log ('postData =', (postData))
       const response = await fetch(baseUrl, {
       method: 'POST', 
       credentials: 'same-origin',
