@@ -8,10 +8,9 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 // API REFERENCES
-const baseUrl = 'https://api.meaningcloud.com/sentiment-2.1?';
+const baseUrl = 'https://api.meaningcloud.com/sentiment-2.1?key=';
 const apiKey = process.env.API_KEY;
 const language = '&lang=en&url='
-//const url = 'http://naturalpermanentmakeup.co.uk'
 
 console.log(`Your API key is ${process.env.API_KEY}`);
 
@@ -63,6 +62,7 @@ app.get('/all', function (req, res) {
 
 // POST DATA FOR 
 app.post('/urlPost', async (request, response) => {
+    //const apiResult = await fetch(`${baseUrl}${apiKey}${language}${request.body.formURL}`);
     try {
         const apiResult = await fetch(`${baseUrl}${apiKey}${language}${request.body.formURL}`);
         console.log(apiResult);
