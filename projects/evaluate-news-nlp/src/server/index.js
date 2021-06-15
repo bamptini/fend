@@ -1,5 +1,4 @@
 /* The code is executed using npm run build - This starts server and sets up all required routes*/
-
 // Create endpoint object to hold data from POST requests
 nlpData = {};
 
@@ -51,8 +50,10 @@ app.listen(8081, function () {
 
 // ADD SOME COMMENTS HERE...
 app.get('/', function (req, res) {
+    console.log ('2')
 res.sendFile(path.resolve('src/client/views/index.html'))
 });
+
 
 // GET DATA FROM ENDPOINT
 app.get('/all', function (req, res) {
@@ -62,9 +63,34 @@ app.get('/all', function (req, res) {
 
 // POST DATA FOR 
 app.post('/urlPost', async (request, response) => {
+    console.log('POST')
+
     //const apiResult = await fetch(`${baseUrl}${apiKey}${language}${request.body.formURL}`);
     try {
-        const apiResult = await fetch(`${baseUrl}${apiKey}${language}${request.body.formURL}`);
+        const apiResult = await fetch(`${baseUrl}${apiKey}${language}${request.nlpData.formURL}`);
+
+        let data = response.json();
+        
+        const { model: 
+                score_tag, 
+                agreement, 
+                subjectivity, 
+                confidence, 
+                irony, 
+                sentence_list } = data;
+
+        let myObject = {
+            result:data.model, 
+            score_tag, 
+            agreement, 
+            subjectivity, 
+            confidence, 
+            irony, 
+            sentence_list
+
+        }
+
+        nlpData = myObject
         console.log(apiResult);
         res.send(nlpData);
         //let newData = request.body;

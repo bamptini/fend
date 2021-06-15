@@ -21,3 +21,5 @@ export{
 document.getElementById('logo').src = img
 
 console.log(checkURL);
+
+

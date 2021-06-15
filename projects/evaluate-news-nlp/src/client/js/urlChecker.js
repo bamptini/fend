@@ -1,4 +1,5 @@
 function checkURL(inputText) {
+    console.log(2)
     console.log("::: Running checkURL :::", inputText);
     const urlChecker = new RegExp(/^(http|https):\/\/[^ "]+$/);
     
