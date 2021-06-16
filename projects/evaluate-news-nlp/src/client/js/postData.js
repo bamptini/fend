@@ -4,6 +4,8 @@ const postData = async ( baseUrl = '', data = {})=>{
   //console.log('postData.js ', data)
   
   console.log('5')
+  console.log(data)
+  console.log(baseUrl)
   
   console.log ('postData =', (postData))
       const response = await fetch(baseUrl, {
@@ -18,13 +20,14 @@ const postData = async ( baseUrl = '', data = {})=>{
     //console.log(response);
       try {
         const newData = await response.json();
+        console.log('6')
         return newData;
       }catch(error) {
-      console.log("error", error);
+      console.log("Not another error", error);
       }
   };
 
-  
+
   console.log("Done with postData")
 
 export{postData};

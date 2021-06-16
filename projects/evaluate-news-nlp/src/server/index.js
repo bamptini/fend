@@ -67,9 +67,9 @@ app.post('/urlPost', async (request, response) => {
 
     //const apiResult = await fetch(`${baseUrl}${apiKey}${language}${request.body.formURL}`);
     try {
-        const apiResult = await fetch(`${baseUrl}${apiKey}${language}${request.nlpData.formURL}`);
+        const apiResult = await fetch(`${baseUrl}${apiKey}${language}${request.body.nlpData}`);
 
-        let data = response.json();
+        let data = await apiResult.json();
         
         const { model: 
                 score_tag, 
@@ -92,7 +92,7 @@ app.post('/urlPost', async (request, response) => {
 
         nlpData = myObject
         console.log(apiResult);
-        res.send(nlpData);
+        response.send(nlpData);
         //let newData = request.body;
     } catch(error) {
         console.log("Hit Error", error);

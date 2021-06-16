@@ -18,12 +18,12 @@
 
   //CODE TO UPDATE UI
   const postUpdates = async()=>{  
-            const entries = await fetch('/urlPost');
+            //const entries = await fetch('/urlPost');
             console.log(entries)
         console.log('8')
         try{
             const nlpData = await entries.json();
-            document.getElementById('nlpResults').innerHTML = `Evaluation on entered URL is: ${nlpData.text}`;
+            document.getElementById('nlpResults').innerHTML = `Evaluation on entered URL is: ${nlpData.result}`;
         }
         catch(err){
             console.log('Error posting data ' + err);

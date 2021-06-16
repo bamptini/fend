@@ -15,15 +15,17 @@ const handleSubmit = async(event) => {
    try{
     console.log('4 about to call postData.js')
     let response = await Client.postData('/urlPost',{nlpData: formURL}) // Here we call postData.js with two params /urlPost and entered URL
-    console.log('object returned ', response)
+    console.log('7 - object returned ', response)
     //console.log('NLP data 2 ',nlpData)
     
+    console.log('8 Now calling postUpdates..')
     postUpdates(response)
 }
 catch (error) {
     console.group(error)
 }
 }
-export { handleSubmit, postUpdates}
+export { handleSubmit}
+export { postUpdates }
 
 
