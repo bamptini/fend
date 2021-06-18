@@ -4,6 +4,7 @@ import { postData } from './js/postData'
 import { postUpdates } from './js/app'
 
 import './js/app'
+import './js/postData'
 import './styles/resets.scss'
 import './styles/base.scss'
 import './styles/footer.scss'

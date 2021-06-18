@@ -5,7 +5,7 @@ export const postData = async ( baseUrl = '', data = {})=>{
   
   console.log('5')
   console.log(data)
-  console.log(baseUrl)
+  console.log('This is the base url ',baseUrl)
   
   console.log ('postData =', (postData))
       const response = await fetch(baseUrl, {
@@ -15,9 +15,9 @@ export const postData = async ( baseUrl = '', data = {})=>{
           'Content-Type': 'application/json',
       },
      // Body data type must match "Content-Type" header        
-      body: JSON.stringify(data), 
+      body: JSON.stringify(data),     
     });
-    //console.log(response);
+    console.log(response);
       try {
         const newData = await response.json();
         console.log('6 - newData', newData)

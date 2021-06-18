@@ -1,5 +1,5 @@
-import { postUpdates } from '/src/client/js/app.js';
-import {postData} from '/src/client/js/postData.js';
+import { postUpdates } from './app.js';
+import {postData} from './postData.js';
 
 export const handleSubmit = async(event) => {
     event.preventDefault()
@@ -28,5 +28,6 @@ catch (error) {
 }
 //export { handleSubmit} added export to line 3 instead
 export { postUpdates }
+export { postData}
 
 
