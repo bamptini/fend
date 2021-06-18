@@ -1,6 +1,7 @@
 import { postUpdates } from '/src/client/js/app.js';
+import {postData} from '/src/client/js/postData.js';
 
-const handleSubmit = async(event) => {
+export const handleSubmit = async(event) => {
     event.preventDefault()
     console.log('1 And we are off')
 
@@ -25,7 +26,7 @@ catch (error) {
     console.group(error)
 }
 }
-export { handleSubmit}
+//export { handleSubmit} added export to line 3 instead
 export { postUpdates }
 
 

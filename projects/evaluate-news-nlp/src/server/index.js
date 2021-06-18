@@ -95,6 +95,6 @@ app.post('/urlPost', async (request, response) => {
         response.send(nlpData);
         //let newData = request.body;
     } catch(error) {
-        console.log("Hit Error", error);
+        console.log("Hit Error in urlPost", error);
     }
 })

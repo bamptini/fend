@@ -16,8 +16,8 @@
       }
     }*/
 
-  //CODE TO UPDATE UI
-  const postUpdates = async()=>{  
+  //CODE TO UPDATE UI - Have to export form this file to be able to import in index.js
+  export const postUpdates = async()=>{  
             //const entries = await fetch('/urlPost');
             console.log(entries)
         console.log('8')

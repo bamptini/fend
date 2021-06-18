@@ -3,7 +3,7 @@ import { handleSubmit } from './js/formHandler'
 import { postData } from './js/postData'
 import { postUpdates } from './js/app'
 
-import './js/app.js'
+//import './js/app'
 import './styles/resets.scss'
 import './styles/base.scss'
 import './styles/footer.scss'

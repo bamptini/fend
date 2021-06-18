@@ -1,5 +1,5 @@
 //POST DATA to route
-const postData = async ( baseUrl = '', data = {})=>{
+export const postData = async ( baseUrl = '', data = {})=>{
   //console.log('postData.js ', baseUrl)
   //console.log('postData.js ', data)
   
@@ -20,7 +20,7 @@ const postData = async ( baseUrl = '', data = {})=>{
     //console.log(response);
       try {
         const newData = await response.json();
-        console.log('6')
+        console.log('6 - newData', newData)
         return newData;
       }catch(error) {
       console.log("Not another error", error);
@@ -30,4 +30,4 @@ const postData = async ( baseUrl = '', data = {})=>{
 
   console.log("Done with postData")
 
-export{postData};
+//export{postData}; Added export at line 3 instead
