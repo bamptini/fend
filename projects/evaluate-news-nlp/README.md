@@ -20,16 +20,23 @@ Original project code can be found at https://github.com/bamptini/fend/tree/deve
 
 An API key will need to be requested from Meaning Cloud and a .env file created in root of project containing the following:
 
-> API_ID=**************************
-> API_KEY= ########################
+***
 
-Note that teh API_ID is not required for this project, so can be left as is. The API_KEY variable will need to be changed to the API key provided by meaningcloud.
+* API_ID=**************************
+* API_KEY= ########################
 
-$ cd ../evaluate-news-nlp
-$ npm install
-$ npm run start (starts server on port 8081)
-$ npm run build-dev (run development environment)
-$ npm run build-prod (run production environment)
+Note that the API_ID is not required for this project, so can be left as is. The API_KEY variable will need to be changed to the API key provided by meaningcloud.
+
+***
+
+* cd ../evaluate-news-nlp
+* $ npm install
+* npm run start (starts server on port 8081)
+* npm run build-dev (run development environment)
+* npm run build-prod (run production environment)
+
+***
 
 ### Unit testing
-  $ npm run test
+
+* npm run test
