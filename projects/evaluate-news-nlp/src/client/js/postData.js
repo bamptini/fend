@@ -1,13 +1,8 @@
 //POST DATA to route
 export const postData = async ( baseUrl = '', data = {})=>{
-  //console.log('postData.js ', baseUrl)
-  //console.log('postData.js ', data)
+   
+  //console.log('5')
   
-  console.log('5')
-  console.log(data)
-  console.log('This is the base url ',baseUrl)
-  
-  console.log ('postData =', (postData))
       const response = await fetch(baseUrl, {
       method: 'POST', 
       credentials: 'same-origin',
@@ -17,7 +12,6 @@ export const postData = async ( baseUrl = '', data = {})=>{
      // Body data type must match "Content-Type" header        
       body: JSON.stringify(data),     
     });
-    console.log(response);
       try {
         const newData = await response.json();
         console.log('6 - newData', newData)
@@ -27,7 +21,5 @@ export const postData = async ( baseUrl = '', data = {})=>{
       }
   };
 
-
   console.log("Done with postData")
 
-//export{postData}; Added export at line 3 instead

@@ -11,7 +11,7 @@ const baseUrl = 'https://api.meaningcloud.com/sentiment-2.1?key=';
 const apiKey = process.env.API_KEY;
 const language = '&lang=en&url='
 
-console.log(`Your API key is ${process.env.API_KEY}`);
+//console.log(`Your API key is ${process.env.API_KEY}`);
 
 // START EXPRESS
 const express = require('express')
@@ -25,7 +25,6 @@ app.use(express.json());
 
 // OTHER DEPENDENCIES
 const path = require('path')
-//const mockAPIResponse = require('./mockAPI.js')
 const bodyParser = require('body-parser');
 
 // CORS FOR CROSS ORIGIN ALLOWANCE
@@ -54,7 +53,6 @@ app.get('/', function (req, res) {
 res.sendFile(path.resolve('src/client/views/index.html'))
 });
 
-
 // GET DATA FROM ENDPOINT
 app.get('/all', function (req, res) {
     console.log("GET data from /all")
@@ -63,9 +61,6 @@ app.get('/all', function (req, res) {
 
 // POST DATA FOR 
 app.post('/urlPost', async (request, response) => {
-    console.log('POST')
-
-    //const apiResult = await fetch(`${baseUrl}${apiKey}${language}${request.body.formURL}`);
     try {
         const apiResult = await fetch(`${baseUrl}${apiKey}${language}${request.body.nlpData}`);
 
@@ -93,7 +88,7 @@ app.post('/urlPost', async (request, response) => {
         nlpData = myObject
         console.log(apiResult);
         response.send(nlpData);
-        //let newData = request.body;
+    
     } catch(error) {
         console.log("Hit Error in urlPost", error);
     }

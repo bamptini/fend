@@ -1,3 +1,11 @@
 {
-    "presets": ["@babel/preset-env"] // Was singel quotes-changes to double
+    "presets": [        
+        [
+                "@babel/preset-env",
+                
+                {
+                    "exclude": ["transform-regenerator"]
+                }
+        ] // Was singel quotes-changes to double
+            ]
 }
